@@ -1,1 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium IPTV</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<!-- External Colors File -->
+<link rel="stylesheet" href="colors.css">
+
+<style>
+/* ===================== BASE LAYOUT ===================== */
+html, body {
+  margin:0; padding:0;
+  font-family:'Arial',sans-serif;
+  height:100%;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition:0.3s;
+}
+body { display:flex; flex-direction:column; min-height:100vh; }
+main { flex:1; padding:20px; background: var(--bg-color); transition:0.3s; }
+
+/* ===================== HEADER ===================== */
+h1#headerTitle {
+  text-align:center;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:2.2em;
+}
+h1#headerTitle img {
+  max-width:420px;
+  width:100%;
+  height:auto;
+  display:block;
+  margin:0 auto;
+}
+/* Gradient text fallback */
+h1#headerTitle.fallback-text {
+  background: linear-gradient(90deg, var(--accent-color), #00b3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size:2.4em;
+}
+body.light h1#headerTitle.fallback-text {
+  background: linear-gradient(90deg, var(--accent-color), #ff9800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===================== DESCRIPTION ===================== */
+p.description { 
+  text-align:center; 
+  opacity:0.7; 
+  font-size:1em; 
+  margin-bottom:25px; 
+}
+
+/* ===================== SEARCH BOX ===================== */
+.search-frame {
+  display:flex; 
+  width:100%; 
+  max-width:420px; 
+  margin:0 auto 15px auto;
+  overflow:hidden; 
+  background: var(--card-color); 
+  border:1px solid var(--border-color); 
+  border-radius:8px;
+  transition:0.3s;
+}
+.search-frame input { 
+  flex:1; padding:12px 15px; border:none; outline:none; 
+  font-size:1em; background:transparent; color: var(--text-color); 
+}
+.search-frame input::placeholder { color: rgba(150,150,150,0.6); }
+.search-frame button { 
+  background: var(--accent-color); border:none; color:#fff; 
+  font-size:1.1em; cursor:pointer; width:48px; display:flex; 
+  justify-content:center; align-items:center; transition:0.2s; 
+}
+.search-frame button:hover { opacity:0.85; }
+
+/* ===================== DARK/LIGHT TOGGLE ===================== */
+.toggle-container { display:flex; justify-content:center; margin-bottom:25px; }
+.switch { position:relative; display:inline-block; width:70px; height:34px; }
+.switch input { opacity:0; width:0; height:0; }
+.slider {
+  position:absolute; cursor:pointer; top:0; left:0; right:0; bottom:0;
+  background: var(--toggle-dark-bg);
+  border-radius: 34px;
+  transition:0.4s;
+}
+.slider:before {
+  position:absolute;
+  content:"\f186"; /* moon */
+  font-family: "Font Awesome 6 Free"; font-weight:900;
+  display:flex; align-items:center; justify-content:center;
+  height:28px; width:28px;
+  left:3px; bottom:3px;
+  font-size:16px; color:#fff;
+  border-radius:50%;
+  background: var(--toggle-dark-circle);
+  transition:0.4s, transform 0.4s;
+}
+input:checked + .slider {
+  background: var(--toggle-light-bg);
+}
+input:checked + .slider:before {
+  transform: translateX(36px);
+  content:"\f185"; /* sun */
+  background: var(--toggle-light-circle);
+}
+.slider:hover:before { transform: scale(1.08); }
+
+/* ===================== CHANNEL LIST ===================== */
+.channel-list { 
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); 
+  gap:16px; transition:0.3s; 
+}
+.channel-card { 
+  background: var(--card-color); border:2px solid var(--card-color); 
+  border-radius:12px; overflow:hidden; cursor:pointer; 
+  transition:0.2s; display:flex; flex-direction:column; 
+  align-items:center; position:relative; 
+}
+.channel-card:hover { 
+  transform:scale(1.05); background: var(--card-hover); 
+  box-shadow:0 0 15px rgba(0,224,214,0.4); 
+}
+.channel-card img { width:100%; aspect-ratio:3/2; object-fit:contain; background: var(--card-color); }
+.play-overlay { 
+  position:absolute; top:50%; left:50%; 
+  transform:translate(-50%,-50%) scale(0.9); 
+  font-size:2em; color: var(--accent-color); 
+  opacity:0; transition:0.3s; pointer-events:none; 
+}
+.channel-card:hover img { opacity:0.5; }
+.channel-card:hover .play-overlay { opacity:1; transform:translate(-50%,-50%) scale(1.2); }
+.channel-card h3 { 
+  width:100%; text-align:center; margin:0; padding:8px 0; 
+  background: var(--card-color); font-size:1em; 
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis; 
+}
+body.light .channel-card h3 { background:#fff3e0 !important; }
+
+/* ===================== FOOTER ===================== */
+footer { 
+  background: var(--bg-color); color: var(--text-color); 
+  text-align:center; padding:14px 10px; 
+  border-top:3px solid var(--accent-color); 
+  font-size:0.9em; transition:0.3s; 
+}
+
+/* ===================== BACK TO TOP ===================== */
+#backToTop {
+  position: fixed; bottom: 25px; right: 25px;
+  background: var(--accent-color); color: var(--text-color);
+  border: none; border-radius: 6px;
+  width: 50px; height: 50px;
+  cursor: pointer; font-size: 18px;
+  display: none; align-items: center; justify-content: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  transition: background 0.3s, transform 0.2s;
+  z-index: 1000;
+}
+#backToTop:hover { transform: scale(1.1); }
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width:480px){ 
+  h1#headerTitle{font-size:1.6em;} 
+  .search-frame{max-width:95%;} 
+  .channel-list{grid-template-columns:repeat(2,1fr); gap:10px;} 
+  .play-overlay{font-size:1.5em;} 
+}
+@media (min-width:481px) and (max-width:768px){ 
+  .channel-list{grid-template-columns:repeat(3,1fr);} 
+}
+@media (min-width:769px) and (max-width:1024px){ 
+  .channel-list{grid-template-columns:repeat(4,1fr);} 
+}
+@media (min-width:1025px){ 
+  .channel-list{grid-template-columns:repeat(6,1fr);} 
+  h1#headerTitle{font-size:2.6em;} 
+}
+</style>
+</head>
+<body>
+<main>
+  <!-- Header -->
+  <h1 id="headerTitle"></h1>
+  <p class="description">The best IPTV platform for your favorite channels</p>
+
+  <!-- Search Box -->
+  <div class="search-frame">
+    <input type="text" id="searchInput" placeholder="Search channels...">
+    <button id="searchBtn"><i class="fas fa-search"></i></button>
+  </div>
+
+  <!-- Dark/Light Toggle -->
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <!-- Channel List -->
+  <div class="channel-list" id="channelList"></div>
+</main>
+
+<!-- Footer -->
+<footer>&copy; 2025 Premium IPTV. All rights reserved.</footer>
+
+<!-- Back to Top -->
+<button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+/* ===================== HEADER IMAGE OR FALLBACK TEXT ===================== */
+const headerImage = ""; // <-- Set your logo URL here
+const headerText = "Premium IPTV";
+const headerEl = document.getElementById("headerTitle");
+
+if(headerImage){
+  const img = document.createElement("img");
+  img.src = headerImage;
+  img.alt = headerText;
+  img.addEventListener("error", ()=>{
+      img.style.display = "none";
+      headerEl.textContent = headerText;
+      headerEl.classList.add("fallback-text");
+  });
+  headerEl.appendChild(img);
+} else {
+  headerEl.textContent = headerText;
+  headerEl.classList.add("fallback-text");
+}
+
+/* ===================== LOAD CHANNELS ===================== */
+let channelsData=[], isSearching=false;
+fetch("/CHD/api/output1.json")
+.then(res=>res.json())
+.then(data=>{
+  channelsData=data; 
+  displayChannels(data);
+})
+.catch(err=>console.error("Error loading channels:",err));
+
+/* ===================== DISPLAY CHANNELS ===================== */
+function displayChannels(channels){
+  const container=document.getElementById("channelList");
+  container.innerHTML="";
+  channels.forEach(c=>{
+    const card=document.createElement("div");
+    card.className="channel-card";
+    card.innerHTML=
+      '<img src="'+c.logo+'" alt="'+c.name+'" loading="lazy">'+
+      '<div class="play-overlay"><i class="fas fa-play-circle"></i></div>'+
+      '<h3 title="'+c.name+'">'+c.name+'</h3>';
+    card.addEventListener("click",()=>{ 
+      window.location.href="/play/index.html?id="+c.id; 
+    });
+    container.appendChild(card);
+  });
+}
+
+/* ===================== SEARCH ===================== */
+const searchInput=document.getElementById("searchInput");
+const searchBtn=document.getElementById("searchBtn");
+
+function performSearch(){
+  const q=searchInput.value.trim().toLowerCase();
+  if(isSearching){
+    searchInput.value="";
+    displayChannels(channelsData);
+    isSearching=false;
+    searchBtn.innerHTML='<i class="fas fa-search"></i>';
+    return;
+  }
+  if(q==="") return;
+  const filtered=channelsData.filter(c=>c.name.toLowerCase().includes(q));
+  displayChannels(filtered);
+  isSearching=true;
+  searchBtn.innerHTML='<i class="fas fa-times"></i>';
+}
+searchBtn.addEventListener("click",performSearch);
+searchInput.addEventListener("keypress",e=>{ if(e.key==="Enter") performSearch(); });
+
+/* ===================== THEME TOGGLE ===================== */
+const modeToggle=document.getElementById("modeToggle");
+if(localStorage.getItem("theme")==="light"){
+  document.body.classList.add("light");
+  modeToggle.checked=true;
+}
+modeToggle.addEventListener("change",()=>{
+  if(modeToggle.checked){
+    document.body.classList.add("light");
+    localStorage.setItem("theme","light");
+  } else {
+    document.body.classList.remove("light");
+    localStorage.setItem("theme","dark");
+  }
+});
+
+/* ===================== BACK TO TOP ===================== */
+const backBtn=document.getElementById("backToTop");
+window.addEventListener("scroll",()=>{
+  backBtn.style.display=(window.scrollY>300)?"flex":"none";
+});
+backBtn.addEventListener("click",()=>{
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>
