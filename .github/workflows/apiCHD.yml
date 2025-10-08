@@ -1,0 +1,57 @@
+name: Fast Auto JSON Update
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # প্রতি 10 মিনিট পরপর রান করবে
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch & Convert
+        run: |
+          mkdir -p CHD/api
+          python3 - <<'PYCODE'
+          import json, requests, time, os
+
+          # সোর্স URL
+          url = "https://raw.githubusercontent.com/abusaeeidx/CricHd-playlists-Auto-Update-permanent/refs/heads/main/api.json"
+
+          print("🔄 Fetching data...")
+          try:
+              data = requests.get(url, timeout=15).json()
+          except Exception as e:
+              print("❌ Error fetching:", e)
+              data = []
+
+          # ✅ Output 1
+          out1 = [
+              {"id": d.get("id"), "name": d.get("name"), "logo": d.get("logo"), "url": d.get("link")}
+              for d in data if d.get("id") and d.get("link")
+          ]
+          with open("CHD/api/output1.json", "w", encoding="utf-8") as f:
+              json.dump(out1, f, ensure_ascii=False, indent=2)
+
+          # ✅ Output 2
+          out2 = {d["id"]: {"file": d["link"]} for d in data if d.get("id") and d.get("link")}
+          with open("CHD/api/output2.json", "w", encoding="utf-8") as f:
+              json.dump(out2, f, ensure_ascii=False, indent=2)
+
+          # ✅ Timestamp for forced commit
+          with open("CHD/api/last_update.txt", "w") as f:
+              f.write(time.strftime("Last auto update: %Y-%m-%d %H:%M:%S UTC", time.gmtime()))
+
+          print("✅ Conversion complete and saved in /CHD/api/")
+          PYCODE
+
+      - name: Force Commit & Push
+        run: |
+          git config user.name "Auto Updater"
+          git config user.email "actions@github.com"
+          git add CHD/api/output1.json CHD/api/output2.json CHD/api/last_update.txt
+          git commit -m "⏰ Forced Auto Update (CHD/api)" || true
+          git push
