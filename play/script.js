@@ -2,7 +2,7 @@
   const config = {
     defaultThumbnail: "",
     defaultStream: "https://cdn.lykstage.com/hls/5/vod/97115/97115.m3u8",
-    channelsJsonUrl: "/CHD/api/output2.json" 
+    channelsJsonUrl: "https://sattrish.github.io/CHD/CHD/api/output2.json" 
   };
 
   // Get URL parameters
