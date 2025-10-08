@@ -33,6 +33,7 @@
       key: "cLGMn8T20tGvW+0eXPhq4NNmLB57TrscPjd1IyJF84o=",
       image: thumbnail || config.defaultThumbnail,
       sources: [{ file: source }],
+      hlshtml: true,
       primary: "html5",
       autostart: true,
       mute: true
