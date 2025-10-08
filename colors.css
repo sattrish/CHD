@@ -1,0 +1,29 @@
+/* ===================== THEME COLORS ===================== */
+
+/* --- DARK THEME --- */
+:root {
+  --bg-color: #1b1d27;
+  --card-color: #2a2d3c;
+  --text-color: #e0e0e0;
+  --accent-color: #00e0d6;
+  --card-hover: #353944;
+  --border-color: #333;
+  --toggle-dark-bg: #444;
+  --toggle-dark-circle: #222;
+  --toggle-light-bg: #ffd54f;
+  --toggle-light-circle: #fff176;
+}
+
+/* --- LIGHT THEME --- */
+body.light {
+  --bg-color: #fffdf6;
+  --card-color: #fff8e1;
+  --text-color: #5d4037;
+  --accent-color: #ffc107;
+  --card-hover: #ffe082;
+  --border-color: #ffecb3;
+  --toggle-dark-bg: #ccc;
+  --toggle-dark-circle: #fff;
+  --toggle-light-bg: #ffd54f;
+  --toggle-light-circle: #fff176;
+}
