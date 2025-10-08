@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CHD Streaming</title>
+  <style>
+       html,
+    body {
+      padding: 0;
+      margin: 0;
+      height: 100%
+    }
 
+    #player {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #000
+    }
+
+    .jw-stats-item {
+      display: none;
+    }
+  </style>
+<link rel="stylesheet" href="https://doyeltv.vercel.app/src/stream/style.css">
+</head>
+
+<body>
+  <!-- Loading spinner -->
+  <div class="loading-spinner" id="loadingSpinner">
+    <div class="spinner"></div>
+  </div>
+  
+  <script src="https://ssl.p.jwpcdn.com/player/v/8.33.2/jwplayer.js"></script>
+  <div id="player"></div>
+<script src="/play/script.js"></script>
+ <script>
+  let wakeLock = null;
+
+  // Function to request wake lock (prevent screen from sleeping)
+  async function requestWakeLock() {
+    try {
+      // Check if browser supports Wake Lock API
+      if ('wakeLock' in navigator) {
+        // Request the screen wake lock
+        wakeLock = await navigator.wakeLock.request('screen');
+        console.log("✅ Wake Lock enabled");
+      }
+    } catch (err) {
+      console.error("Wake Lock Error:", err);
+    }
+  }
+
+  // Try to get the video element
+  const video = document.querySelector('video');
+
+  if (video) {
+    // When the video starts playing, activate wake lock
+    video.addEventListener('play', requestWakeLock);
+  }
+
+  // If the tab becomes visible again, re-activate wake lock
+  document.addEventListener('visibilitychange', () => {
+    if (wakeLock !== null && document.visibilityState === 'visible') {
+      requestWakeLock();
+    }
+  });
+ </script>
+</body>
+</html>
