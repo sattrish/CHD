@@ -1,116 +1,113 @@
 {
   "star1in": {
-    "file": "https://d15.epicquesthero.com:999/hls/star1in.m3u8?md5=6osSvmllmP16GliBbki8EQ&expires=1760096602"
+    "file": "https://d15.epicquesthero.com:999/hls/star1in.m3u8?md5=ZeUdP9yO_tGg4F5sNXeerA&expires=1760099281"
   },
   "starhindi": {
-    "file": "https://d15.epicquesthero.com:999/hls/starhindi.m3u8?md5=7KWjqW3AVOkQvq9YrqXJ9Q&expires=1760096602"
+    "file": "https://d15.epicquesthero.com:999/hls/starhindi.m3u8?md5=zQpWkjN9ncmVsyQ_blOqjQ&expires=1760099281"
   },
   "ptvpk": {
-    "file": "https://d15.epicquesthero.com:999/hls/ptvpk.m3u8?md5=fWaZuKkl0nxiYDfXgIi4ag&expires=1760096602"
+    "file": "https://d15.epicquesthero.com:999/hls/ptvpk.m3u8?md5=mt6HaTu1jWIvA5BWCJ6BgQ&expires=1760099281"
   },
   "willowusa": {
-    "file": "https://d15.epicquesthero.com:999/hls/willowusa.m3u8?md5=eJUelX8pPmKHhmswUwt_WQ&expires=1760096602"
+    "file": "https://d15.epicquesthero.com:999/hls/willowusa.m3u8?md5=YKS7u7BIm-k1W3ifuORFcw&expires=1760099281"
   },
   "willowextra": {
-    "file": "https://d15.epicquesthero.com:999/hls/willowextra.m3u8?md5=QIeJ2Ygq2WMki4jbgNZXUw&expires=1760096602"
+    "file": "https://d15.epicquesthero.com:999/hls/willowextra.m3u8?md5=VY-x9vhdxzkW93mOe7bE0Q&expires=1760099282"
   },
   "tenspk": {
-    "file": "https://d15.epicquesthero.com:999/hls/tenspk.m3u8?md5=rjXSACRC4DXUq7J-jbPK0w&expires=1760096603"
+    "file": "https://d15.epicquesthero.com:999/hls/tenspk.m3u8?md5=Po_ReHLkA9ZlD0RPF0NEMw&expires=1760099282"
   },
   "asportshd": {
-    "file": "https://d15.epicquesthero.com:999/hls/asportshd.m3u8?md5=ITsnn6WDrJkFE1cxCvxzOA&expires=1760096603"
-  },
-  "skyscric": {
-    "file": "https://d15.epicquesthero.com:999/hls/skyscric.m3u8?md5=PHAc9RJNf6x4KVZY8AcOXA&expires=1760096603"
+    "file": "https://d15.epicquesthero.com:999/hls/asportshd.m3u8?md5=Fl8Wuh0yoPuSmKJgyq4h2A&expires=1760099282"
   },
   "skysme": {
-    "file": "https://d15.epicquesthero.com:999/hls/skysme.m3u8?md5=0fCQtRDpzzoUnWAH6fK0uA&expires=1760096606"
+    "file": "https://d15.epicquesthero.com:999/hls/skysme.m3u8?md5=tBWnJb_slbrPJL48QiV7Qg&expires=1760099284"
   },
   "bbtsp1": {
-    "file": "https://d15.epicquesthero.com:999/hls/bbtsp1.m3u8?md5=ja4QHXX_jw-zE95g6hm5FA&expires=1760096604"
+    "file": "https://d15.epicquesthero.com:999/hls/bbtsp1.m3u8?md5=_gIfrcorIyJeat4AxIw2tg&expires=1760099282"
+  },
+  "bbtsp2": {
+    "file": "https://d15.epicquesthero.com:999/hls/bbtsp2.m3u8?md5=1BshOLIY8jsdCYFDuO4icQ&expires=1760099282"
   },
   "bbtsp3": {
-    "file": "https://d15.epicquesthero.com:999/hls/bbtsp3.m3u8?md5=E6rqGt8Ip-Sp5tJ39zBxIQ&expires=1760096604"
+    "file": "https://d15.epicquesthero.com:999/hls/bbtsp3.m3u8?md5=GsqE0m4UP6xRF8uv7SWOBQ&expires=1760099282"
   },
   "bbtespn": {
-    "file": "https://d15.epicquesthero.com:999/hls/bbtespn.m3u8?md5=gRnuasD_RlPaFF6ccLcyQQ&expires=1760096604"
+    "file": "https://d15.epicquesthero.com:999/hls/bbtespn.m3u8?md5=RTGxnVnLcX4Aba7JpPV1mg&expires=1760099282"
   },
   "sky1nz": {
-    "file": "https://d15.epicquesthero.com:999/hls/sky1nz.m3u8?md5=gTPDiksehjl7f4JWrOQDHQ&expires=1760096604"
+    "file": "https://d15.epicquesthero.com:999/hls/sky1nz.m3u8?md5=GXBfE72V-qFkxGS5BrGOfw&expires=1760099283"
   },
   "sky2nz": {
-    "file": "https://d15.epicquesthero.com:999/hls/sky2nz.m3u8?md5=rLeuU0xdKCUQr3DT0O9mZA&expires=1760096604"
+    "file": "https://d15.epicquesthero.com:999/hls/sky2nz.m3u8?md5=ZEK8JhFDd-pE0YSbbklIVA&expires=1760099283"
   },
   "sky3nz": {
-    "file": "https://d15.epicquesthero.com:999/hls/sky3nz.m3u8?md5=IAHPMqAoRIUmTRgIx3hiTA&expires=1760096604"
+    "file": "https://d15.epicquesthero.com:999/hls/sky3nz.m3u8?md5=Bv9x_HlLD9kEF6oNGgvcnA&expires=1760099283"
   },
   "sky4nz": {
-    "file": "https://d15.epicquesthero.com:999/hls/sky4nz.m3u8?md5=GiFPE88YzdonbQqs0YNlPQ&expires=1760096605"
+    "file": "https://d15.epicquesthero.com:999/hls/sky4nz.m3u8?md5=eZtMGqGIJTf4ihowEcjfkA&expires=1760099283"
   },
   "sky5nz": {
-    "file": "https://d15.epicquesthero.com:999/hls/sky5nz.m3u8?md5=D1vhD_EN3YJQ4TZ1euYlkQ&expires=1760096605"
+    "file": "https://d15.epicquesthero.com:999/hls/sky5nz.m3u8?md5=hXtuCsBchhiGZrQfOZjfqA&expires=1760099283"
   },
   "sky6nz": {
-    "file": "https://d15.epicquesthero.com:999/hls/sky6nz.m3u8?md5=s9mAtAdnoJzZnm6C_yFImQ&expires=1760096605"
+    "file": "https://d15.epicquesthero.com:999/hls/sky6nz.m3u8?md5=_q3fUlcxWa2sejXfhyH0Ew&expires=1760099283"
   },
   "sky7nz": {
-    "file": "https://d15.epicquesthero.com:999/hls/sky7nz.m3u8?md5=akxufwoiOCsJr9Tb4aGBbg&expires=1760096605"
+    "file": "https://d15.epicquesthero.com:999/hls/sky7nz.m3u8?md5=ZM_XJOKcrRMF-Q9gOU42SA&expires=1760099283"
   },
   "sky8nz": {
-    "file": "https://d15.epicquesthero.com:999/hls/sky8nz.m3u8?md5=LPt3G1vy_VlEMakRc07D0w&expires=1760096605"
+    "file": "https://d15.epicquesthero.com:999/hls/sky8nz.m3u8?md5=KbAa-q5AMC7Fs-8jg0Q-7w&expires=1760099283"
   },
   "sky9nz": {
-    "file": "https://d15.epicquesthero.com:999/hls/sky9nz.m3u8?md5=IPuCWpwkqovk6PQhAEqMpg&expires=1760096606"
+    "file": "https://d15.epicquesthero.com:999/hls/sky9nz.m3u8?md5=cU0aHUVzDTp4eFmEWnVklQ&expires=1760099284"
   },
   "skysact": {
-    "file": "https://d15.epicquesthero.com:999/hls/skysact.m3u8?md5=D9X_FfRYGRDhbWf5NIoE4Q&expires=1760096606"
+    "file": "https://d15.epicquesthero.com:999/hls/skysact.m3u8?md5=BlxqFY5EbJsDZR2i3Tx_Cw&expires=1760099284"
   },
   "skysgol": {
-    "file": "https://d15.epicquesthero.com:999/hls/skysgol.m3u8?md5=u-bh5qDUo-AFBQDb71JpOg&expires=1760096606"
+    "file": "https://d15.epicquesthero.com:999/hls/skysgol.m3u8?md5=xGTrde3prt9J4r5jghCrkw&expires=1760099284"
   },
   "skysprem": {
-    "file": "https://d15.epicquesthero.com:999/hls/skysprem.m3u8?md5=_wd7t2fMwUrt6ZFtX3ST-Q&expires=1760096606"
+    "file": "https://d15.epicquesthero.com:999/hls/skysprem.m3u8?md5=5OPrtl9I-MSi-e0jp_UbKQ&expires=1760099284"
   },
   "skysfott": {
-    "file": "https://d15.epicquesthero.com:999/hls/skysfott.m3u8?md5=Tm3H6DxiLomFzZgEAeWrzg&expires=1760096606"
-  },
-  "skysare": {
-    "file": "https://d15.epicquesthero.com:999/hls/skysare.m3u8?md5=pEXNqvbHzHeRKXv14HA0TA&expires=1760096608"
+    "file": "https://d15.epicquesthero.com:999/hls/skysfott.m3u8?md5=vI2DMEQs4Wr5dgl6P63x2w&expires=1760099284"
   },
   "skysfor1": {
-    "file": "https://d15.epicquesthero.com:999/hls/skysfor1.m3u8?md5=Q5fzWJXq4Rd1IEWuMCrVHw&expires=1760096607"
+    "file": "https://d15.epicquesthero.com:999/hls/skysfor1.m3u8?md5=wDeWiiCU7Hzbk2B6DtqzoQ&expires=1760099284"
   },
   "laligauk": {
-    "file": "https://d15.epicquesthero.com:999/hls/laligauk.m3u8?md5=i9zwqV0T3oJjuirQlwZ2Pw&expires=1760096607"
+    "file": "https://d15.epicquesthero.com:999/hls/laligauk.m3u8?md5=tMe4aMUcyZUZvZHlYc0LQw&expires=1760099284"
   },
   "premieruk": {
-    "file": "https://d15.epicquesthero.com:999/hls/premieruk.m3u8?md5=b947QTpjgKI9Ab8vWw5Jwg&expires=1760096607"
+    "file": "https://d15.epicquesthero.com:999/hls/premieruk.m3u8?md5=rDUN01It-BljVSsf-ss52A&expires=1760099285"
   },
   "hdchnl2": {
-    "file": "https://d15.epicquesthero.com:999/hls/hdchnl2.m3u8?md5=QCin2sOH7XmF6RClR7Qu2w&expires=1760096607"
+    "file": "https://d15.epicquesthero.com:999/hls/hdchnl2.m3u8?md5=JO42LKE1LkwpD7P66zsXYA&expires=1760099285"
   },
   "superfotball": {
-    "file": "https://d15.epicquesthero.com:999/hls/superfotball.m3u8?md5=2ocWNVfJS_rkpPuyqqNExw&expires=1760096607"
+    "file": "https://d15.epicquesthero.com:999/hls/superfotball.m3u8?md5=nFOUvZy14zXvYgU5avHOtw&expires=1760099285"
   },
   "superpremier": {
-    "file": "https://d15.epicquesthero.com:999/hls/superpremier.m3u8?md5=BJnIWZ_LblpPo5YoJDLIVw&expires=1760096608"
+    "file": "https://d15.epicquesthero.com:999/hls/superpremier.m3u8?md5=leXMKyaa9yC8Gussvb76WA&expires=1760099285"
   },
   "fox501": {
-    "file": "https://d15.epicquesthero.com:999/hls/fox501.m3u8?md5=tJEtRK9WvaJyBIO6MOlLSA&expires=1760096609"
+    "file": "https://d15.epicquesthero.com:999/hls/fox501.m3u8?md5=MyCO5lKIU-6cktzhbc0Xqg&expires=1760099286"
   },
   "espnusa": {
-    "file": "https://d15.epicquesthero.com:999/hls/espnusa.m3u8?md5=tqj7-F_awB6CoS2l70oeUg&expires=1760096608"
+    "file": "https://d15.epicquesthero.com:999/hls/espnusa.m3u8?md5=xjQdzSBxDf5aBVUurETW_Q&expires=1760099285"
   },
   "espn2": {
-    "file": "https://d15.epicquesthero.com:999/hls/espn2.m3u8?md5=4lMb4_miaVTlV9vZJbZSmw&expires=1760096608"
+    "file": "https://d15.epicquesthero.com:999/hls/espn2.m3u8?md5=OzS4sV6WfSrSVXIgAAfomg&expires=1760099285"
   },
   "skysmixx": {
-    "file": "https://d15.epicquesthero.com:999/hls/skysmixx.m3u8?md5=UP9acnLXf9nnWzY-Ip4Yyg&expires=1760096608"
+    "file": "https://d15.epicquesthero.com:999/hls/skysmixx.m3u8?md5=NiDiHeVbJt2lrZmLtNRj0Q&expires=1760099285"
   },
   "skystennis": {
-    "file": "https://d15.epicquesthero.com:999/hls/skystennis.m3u8?md5=OgpsQAtoxbsafFD6Ap_ziQ&expires=1760096609"
+    "file": "https://d15.epicquesthero.com:999/hls/skystennis.m3u8?md5=PsQoW7sjubPfcN18gcvVgg&expires=1760099286"
   },
   "ten1hd": {
-    "file": "https://d15.epicquesthero.com:999/hls/ten1hd.m3u8?md5=lvxsI3sCM7HhY_Iy1pUFzg&expires=1760096609"
+    "file": "https://d15.epicquesthero.com:999/hls/ten1hd.m3u8?md5=vC5EPiBBwwlwh2sG6in_OQ&expires=1760099286"
   }
 }
